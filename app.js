@@ -1,6 +1,6 @@
 const Koa = require('koa')
 const app = new Koa()
-const router = require('./app/routes')
+const router = require('./src/routes')
 const body = require('koa-body')
 const PORT = 3000
 

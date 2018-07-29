@@ -1,4 +1,4 @@
-const { $http, apiURL } = require('../../config/globals.js')
+const { $http, apiURL } = require('../config/globals.js')
 const Classes = require('../models/Classes.js')
 
 module.exports = {
