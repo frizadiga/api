@@ -1,4 +1,4 @@
-const knex = require('../../app/config/db.js')
+const knex = require('../app/config/db.js')
 
 module.exports = {
   

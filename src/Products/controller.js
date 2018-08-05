@@ -1,5 +1,5 @@
-const { $http, apiURL } = require('../../app/config/globals.js')
-const Classes = require('../models/Classes.js')
+const { $http, apiURL } = require('../app/config/globals')
+const ProductsModel = require('./model')
 
 module.exports = {
 
@@ -10,7 +10,7 @@ module.exports = {
   },
 
   findOne: async (ctx) => {
-    const data = await Classes.findOne(ctx.params.id, ctx.query)
+    const data = await ProductsModel.findOne(ctx.params.id, ctx.query)
     ctx.body = {
       status: data.length ? 200:404,
       results: data

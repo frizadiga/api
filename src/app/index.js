@@ -1,6 +1,6 @@
 const Koa = require('koa')
 const app = new Koa()
-const router = require('../src/routes')
+const router = require('./routes')
 const body = require('koa-body')
 const cors = require('@koa/cors')
 const PORT = 3000

@@ -1,15 +1,15 @@
 const router = require('koa-router')()
-const UsersController = require('../controllers/Users.js')
-const ClassesController = require('../controllers/Classes.js')
-const Classes = require('../models/Classes.js')
-const knex = require('../../app/config/db.js')
+const UsersController = require('../../Users/controller')
+const ProductsController = require('../../Products/controller')
+const ProductsModel = require('../../Products/model')
+// const knex = require('../../app/config/db.js')
 
 // Users
 router.get('/users', UsersController.index)
 
-// Classes
-router.get('/classes', ClassesController.list)
-router.get('/classes/:id', ClassesController.findOne)
+// Products
+router.get('/products', ProductsController.list)
+router.get('/products/:id', ProductsController.findOne)
 
 // Root
 router.get('/', (ctx) => {
@@ -22,7 +22,7 @@ router.get('/try', async (ctx) => {
   // ctx.body = ctx.url
   // ctx.body = ctx.params
   ctx.body = ctx.query
-  // ctx.body = await Classes.find()
+  // ctx.body = await Products.find()
   // ctx.body = await knex.select().table('circles').limit(1)
   // ctx.body = await knex.raw('select * from circles limit 1').rows
 })
