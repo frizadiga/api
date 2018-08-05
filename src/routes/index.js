@@ -2,7 +2,7 @@ const router = require('koa-router')()
 const UsersController = require('../controllers/Users.js')
 const ClassesController = require('../controllers/Classes.js')
 const Classes = require('../models/Classes.js')
-const knex = require('../config/db.js')
+const knex = require('../../app/config/db.js')
 
 // Users
 router.get('/users', UsersController.index)
