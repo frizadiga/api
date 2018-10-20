@@ -3,7 +3,7 @@ const app = new Koa()
 const router = require('./routes')
 const body = require('koa-body')
 const cors = require('@koa/cors')
-const PORT = 3000
+const { PORT } = require('./config')
 
 app
   .use(cors())
