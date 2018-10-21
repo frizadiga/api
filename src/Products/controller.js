@@ -1,10 +1,10 @@
-const { $http, apiURL } = require('../app/config/globals')
+const { $http, API_URL } = require('../app/config')
 const ProductsModel = require('./model')
 
 module.exports = {
 
   list: async (ctx) => {
-    const url = `${apiURL}/circles/${ctx.url.indexOf('?')!==-1?'?'+ctx.url.split('?').pop():'/'+ctx.url.split('/').shift()}`
+    const url = `${API_URL}/circles/${ctx.url.indexOf('?')!==-1?'?'+ctx.url.split('?').pop():'/'+ctx.url.split('/').shift()}`
     const { data } = await $http(url)
     ctx.body = data
   },
