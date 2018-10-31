@@ -12,9 +12,13 @@ router.get('/products', ProductsController.list)
 router.get('/products/:id', ProductsController.findOne)
 
 // Root
-router.get('/', (ctx) => {
-  ctx.body = {message: 'api v1'}
-})
+const RootController = (ctx) => {
+  const { response: res } = ctx
+  
+  return res.body = { message: 'f-api v1' }
+}
+
+router.get('/', RootController)
 
 //Try
 router.get('/try', async (ctx) => {
