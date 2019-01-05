@@ -1,8 +1,3 @@
-require('dotenv').config()
-
-const config = {
-  PORT: process.env.PORT,
-  API_URL: process.env.API_URL,
-}
+const config = require('./config')
 
 module.exports = config
