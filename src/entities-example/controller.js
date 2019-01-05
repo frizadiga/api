@@ -1,5 +1,5 @@
-const { $http, API_URL } = require('../app/config')
-const ProductsModel = require('./model')
+const { API_URL } = require('../app/config')
+const EntitiesExampleModel = require('./model')
 
 module.exports = {
 

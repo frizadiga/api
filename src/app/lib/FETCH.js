@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const FETCH = axios.create({
+const fetch = axios.create({
   baseURL: 'https://api.domain.com/v1',
   timeout: 10000,
   headers: {
@@ -9,4 +9,4 @@ const FETCH = axios.create({
   }
 })
 
-export default FETCH
+export default fetch
