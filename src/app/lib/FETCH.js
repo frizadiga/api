@@ -1,12 +1,12 @@
-import axios from 'axios';
+const axios = require('axios');
 
-const fetch = axios.create({
+const Fetch = axios.create({
   baseURL: 'https://api.domain.com/v1',
   timeout: 10000,
   headers: {
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Credentials' : true,
-  }
-})
+    'Access-Control-Allow-Credentials': true,
+  },
+});
 
-export default fetch
+module.exports = Fetch;
